@@ -23,7 +23,7 @@ class details{
         System.out.println("The total price of the items is: "+totalprice);
     }
 }
-class test003 {
+class Test003 {
     public static void main(String[] args) {
         details dt = new details();
         dt.price();

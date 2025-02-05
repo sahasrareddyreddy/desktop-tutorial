@@ -8,7 +8,7 @@ class NextMultipleOf100 {
     }
 }
 
-public class ps002 {
+public class PS002 {
     public static void main(String[] args) {
         @SuppressWarnings("unused")
         NextMultipleOf100 obj = new NextMultipleOf100();

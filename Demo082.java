@@ -21,16 +21,13 @@ public class Demo082 {
         }
         
         int[] mergedArray = new int[n1 + n2];
-        for (int i = 0; i < n1; i++) {
-            mergedArray[i] = arr1[i];
-        }
-        for (int i = 0; i < n2; i++) {
-            mergedArray[n1 + i] = arr2[i];
-        }
+        System.arraycopy(arr1, 0, mergedArray, 0, n1);
+        System.arraycopy(arr2, 0, mergedArray, n1, n2);
         
         System.out.println("Merged array:");
         for (int num : mergedArray) {
             System.out.print(num + " ");
         }
+        scanner.close();
     }
 }

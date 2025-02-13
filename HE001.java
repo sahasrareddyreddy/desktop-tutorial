@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class MexArrayPrefix {
+public class HE001 {
     public static void findMexPrefix(int[] arr) {
         int n = arr.length;
         List<Integer> result = new ArrayList<>();

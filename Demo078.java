@@ -1,47 +1,28 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Demo078 {
     public static void main(String[] args) {
-        S78 obj = new S78();
-        obj.s78();
-    }
-}
-
-class S78 {
-    public void s78() {
-        Scanner sc = new Scanner(System.in);
-
-        System.out.print("Enter the size of the array: ");
-        int n = sc.nextInt();
-        int[] arr = new int[n];
-
-        System.out.println("Enter " + n + " numbers:");
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the number of elements: ");
+        int n = scanner.nextInt();
+        ArrayList<Integer> even = new ArrayList<>();
+        ArrayList<Integer> odd = new ArrayList<>();
+        System.out.println("Enter the numbers:");
         for (int i = 0; i < n; i++) {
-            arr[i] = sc.nextInt();
-        }
-
-        rearrangeEvenOdd(arr);
-
-        System.out.println("sorted array");
-        for (int num : arr) {
-            System.out.print(num + " ");
-        }
-
-        sc.close();
-    }
-
-    public static void rearrangeEvenOdd(int[] arr) {
-        int[] result = new int[arr.length];
-        int left = 0, right = arr.length - 1;
-
-        for (int num : arr) {
+            int num = scanner.nextInt();
             if (num % 2 == 0) {
-                result[left++] = num;
+                even.add(num);
             } else {
-                result[right--] = num;
+                odd.add(num);
             }
         }
-
-        System.arraycopy(result, 0, arr, 0, arr.length);
+        for (int e : even) {
+            System.out.print(e + " ");
+        }
+        System.out.print(" | ");
+        for (int o : odd) {
+            System.out.print(o + " ");
+        }
     }
 }
